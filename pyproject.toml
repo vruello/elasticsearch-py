@@ -42,7 +42,7 @@ keywords = [
 ]
 dynamic = ["version"]
 dependencies = [
-    "elastic-transport>=8.15.1,<9",
+    "elastic-transport@git+https://github.com/vruello/elastic-transport-python@8.x",
     "python-dateutil",
     "typing-extensions",
 ]
@@ -116,6 +116,9 @@ include = [
 
 [tool.hatch.build.targets.wheel]
 packages = ["elasticsearch"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.pytest.ini_options]
 junit_family = "legacy"
